@@ -6,11 +6,9 @@ int main(int argc, char **argv)
    ros::NodeHandle nh;
    TimeVaryingKF TVKF(&nh);
 
-   ros::Rate loop_rate(100);
    
    while (ros::ok()) {
-      ros::spinOnce();
-      loop_rate.sleep();
+      ros::spin();
    }
 
    return 0;
